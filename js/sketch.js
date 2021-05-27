@@ -32,6 +32,7 @@ function preload() {
     ganar = loadSound('assets/ganar.mp3');
     perder = loadSound('assets/perder.mp3');
     gameOver = loadImage("assets/gameover.png");
+    sonidopause = loadSound('assets/pause.mp3');
 }
 
 function setup() {
@@ -254,8 +255,10 @@ function keyPressed(){
 	if(keyCode === 13){
 		if(pause==true){
 			pause=false;
+			sonidopause.play();
 		}else{
 			pause=true;
+			sonidopause.play();
 		}
 		if(iniciar==false){
 			iniciar=true;
