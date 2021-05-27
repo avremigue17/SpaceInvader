@@ -88,16 +88,7 @@ function draw() {
 
 				//colision bala marciano nave
 				for (var i = 0; i < arrayDisparoMarcianos.length; i++) {
-					/*if(array.length!=0 && arrayDisparoMarcianos!=0){
-						for (var k = 0; k < array.length; k++) {
-							if(array[k].x>arrayDisparoMarcianos[i].x-5 && array[k].x<arrayDisparoMarcianos[i].x+15){
-								if(array[k].y>arrayDisparoMarcianos[i].y-5 && array[k].y<arrayDisparoMarcianos[i].y+15){
-									arrayDisparoMarcianos.splice(i,1);
-									array.splice(k,1);
-								}
-							}
-						}
-					}else*/ if(arrayDisparoMarcianos[i].x>p1.x+10 && arrayDisparoMarcianos[i].x<p1.x+60){
+					if(arrayDisparoMarcianos[i].x>p1.x+10 && arrayDisparoMarcianos[i].x<p1.x+60){
 						if(arrayDisparoMarcianos[i].y>p1.y && arrayDisparoMarcianos[i].y<p1.y+60){
 							for (var j =0; j <1; j++) {
 								impacto2.play();
@@ -202,14 +193,12 @@ function draw() {
 
 				push();
 					textSize(20);
-					//textAlign(10, height-300);
 					fill("white");
 					stroke("white");
 					text("VIDAS", 20, height-410);
 				pop();
 				push();
 					textSize(20);
-					//textAlign(10, height-300);
 					fill("white");
 					stroke("white");
 					text("SCORE",20,100);
@@ -227,7 +216,6 @@ function draw() {
 			}
 		}else{
 			background(gameOver);
-			//image(gameOver,0,50);
 		}
 	}else{
 		background(imagenFondoInicial);
