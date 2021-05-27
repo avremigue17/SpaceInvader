@@ -242,9 +242,13 @@ function move(){
 
 function keyPressed(){
 	if(iniciar==true){
-		if(keyCode === 32){
-			balaNave.play();
-			array.push(new Disparo(p1.x+32, p1.y,-4,imagenShot));
+		if(gameover==false){
+			if(pause==false){
+				if(keyCode === 32){
+					balaNave.play();
+					array.push(new Disparo(p1.x+32, p1.y,-4,imagenShot));
+				}
+			}
 		}
 	}
 	if(keyCode === 13){
